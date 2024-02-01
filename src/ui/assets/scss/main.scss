@@ -1,0 +1,44 @@
+// Core variables and mixins bourbon
+// Reset
+// @import "common/reset";
+// @import "spacing";
+
+// Component
+// @import "component";
+@import "common/mixin";
+@import "common/var";
+@import "common/icon";
+@import "common/space";
+@import "common/flex";
+// @import "common/bg";
+@import "common/font";
+@import "common/text";
+@import "common/btn";
+// @import "common/form";
+@import "common/list";
+// @import "common/dropdown";
+// @import "common/tooltip";
+// @import "common/popover";
+@import "common/common";
+
+// Component
+// @import "plugins/daterangepicker";
+// @import "component/modal";
+@import "component/header";
+@import "component/ant_modal";
+@import "component/ant_form";
+@import "component/ant_table";
+@import "component/ant_tag";
+@import "component/ant_alert";
+@import "component/ant_tooltip";
+@import "component/footer";
+@import "component/layout";
+
+// Page
+// @import "page/home";
+// @import "page";
+// @import "module";
+// @import "component/modal";
+
+// Commnet lai file nay khi build file cho NextJs
+// @import "./notUseForNext.scss";

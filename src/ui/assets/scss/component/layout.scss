@@ -1,0 +1,51 @@
+.cms-layout-app {
+  min-height: 100vh;
+
+  .site-layout .site-layout-background {
+    padding: 32px;
+    border-radius: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    //overflow-x: scroll;
+  }
+
+  .site-layout-header {
+    background: #fff;
+
+    box-shadow: 0 2px 8px #f2f2f2;
+
+    .menu-header {
+      flex: auto;
+      justify-content: center;
+    }
+  }
+}
+
+.top-right-container {
+  display: flex;
+}
+
+.platform-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.action-container {
+  display: flex;
+  align-items: center;
+  // margin-right: 30px;
+  cursor: pointer;
+}
+
+.app-type-menu {
+  padding-bottom: 16px;
+
+  .ant-menu-item {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+

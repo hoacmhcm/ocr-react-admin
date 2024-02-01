@@ -1,0 +1,87 @@
+// @import "var";
+@import "mixin";
+@import "var";
+
+.ant-btn {
+	border-radius: 4px;
+	height: 40px;
+	font-size: 16px;
+	font-weight: 500;
+	&:hover {opacity: 0.85;}
+	&-primary {
+		background-color: $brand_50;
+		color: #fff;
+		&.disabled,
+		&:disabled {
+			background-color: $neutral_20;
+			border-color: $neutral_20;
+			color: $neutral_70;
+			pointer-events: none;
+		}
+	}
+	&-yellow,
+	&-yellow:hover,
+	&-yellow:focus{
+		background-color: $yellow_50;
+		color: #fff;
+	}
+  &-red,
+	&-red:hover,
+	&-red:focus{
+		background-color: $red_60;
+    border-color: $red_60;
+		color: #fff;
+	}
+	&-white {
+		background-color: #fff;
+		color: $brand_50;
+		border: 1px solid $brand_50;
+	}
+	&-default,
+	&-default:hover {
+		border-color: $brand_50;
+		color: $brand_50;
+		&.disabled {
+		  .icon {opacity: 0.5;}
+		}
+	}
+	&-outline {
+		&-primary {
+			border-color: $brand_50;
+			color: $brand_50;
+		}
+		&-default {
+			border-color: $brand_50;
+			color: $brand_50;
+		}
+    &-green,
+    &-green:hover,
+    &-green:focus {
+      color: $green_60;
+      border-color: $green_60;
+      &.disabled {
+        .icon {opacity: 0.5;}
+      }
+    }
+	}
+  &-blue {
+    &-default {
+      background-color: $brand_10;
+      color: $brand_50;
+      border-color: $brand_10;
+    }
+  }
+	&-sm {
+		height: 26px;
+		padding: 0 8px;
+		font-size: 12px;
+		line-height: 24px;
+	}
+	&-lg {
+		height: 44px!important;
+		line-height: 44px!important;
+		padding: 0 24px;
+		font-size: 18px;
+	}
+	&.has_icon {display: flex;align-items: center;}
+}

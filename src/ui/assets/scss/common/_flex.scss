@@ -1,0 +1,29 @@
+$sizes: 4, 6, 8, 12, 16, 20, 24, 32, 36, 42;
+
+.flex {
+	display: flex;
+	&-wrap {flex-wrap: wrap;}
+	&-midle {
+		align-items: center;
+		align-content: center;
+	}
+	&-space {
+		justify-content: space-between;
+	}
+	&-center {justify-content: center;}
+	&-shrink {
+		flex-shrink: 0;
+	}
+	&-top {align-items: flex-start;}
+	&-end {justify-content: flex-end;}
+}
+@each $size in $sizes {
+	.gap-#{$size} {
+		grid-gap: #{$size}px;
+		gap: #{$size}px;
+	}
+	.gapx-#{$size} {
+		grid-gap:0 #{$size}px;
+		gap:0 #{$size}px;
+	}
+}

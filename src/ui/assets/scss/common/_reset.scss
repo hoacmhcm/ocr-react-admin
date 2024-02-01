@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/* Prevent Tap */
+*{box-sizing:border-box;-moz-box-sizing:border-box;margin: 0;padding: 0;-webkit-box-sizing:border-box}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);/* Stops flash on tap iOS */}
+
+/* Typography */
+// .h1, .h2, .h3, .h4, .h5, .h6{font-family:$family-sans-serif;font-weight:$weight-bold}
+// h1{@extend .h1;}
+// h2{@extend .h2;}
+// h3{@extend .h3;}
+// h4{@extend .h4;}
+// h5{@extend .h5;}
+// h6{@extend .h6;}

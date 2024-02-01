@@ -1,0 +1,41 @@
+
+// @import "var";
+@import "mixin";
+@import "var";
+
+.bg {
+	&_brand {
+		&_80 {
+			background-color: $brand_80;
+			color: #fff;
+		}
+	}
+	&_white {
+		&_10 {
+			background-color: rgba(255,255,255,.1);
+		}
+	}
+	&_trans {
+		background-color: transparent;
+	}
+	&_neu {
+		&_90 {
+			background-color: $neutral_90;
+			color: $neutral_40;
+		}
+	}
+}
+
+.color {
+	&_white {
+		color: #fff;
+		&::placeholder {
+			color: #fff;
+		}
+	}
+}
+.bdrs {
+	&_4 {
+		border-radius: 4px;
+	}
+}

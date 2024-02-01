@@ -1,0 +1,53 @@
+#footer {
+	.container {
+		max-width: 100%;
+		padding: 32px 32px 16px;
+		@include min_767 {
+			padding: 24px 40px;
+		}
+	}
+	.loco {
+		width: 250px;
+		img {width: 100%;}
+	}
+	ul {
+		li {
+			&+li {margin-top: 8px;}
+			a {
+				&:hover {color: #fff;}
+			}
+		}
+	}
+	.flex {
+		@include max_991 {
+			flex-wrap: wrap;
+			gap: 0 60px;
+		}
+	}
+	.col.flex-shrink {
+		@include max_767 {
+			width: 100%;
+		}
+		@include max_991 {
+			margin-top: 20px;
+		}
+		@include min_767 {
+			max-width: 286px;
+		}
+		@include min_991 {
+			margin-left: 32px;
+		}
+		@include min_1200 {
+			margin-left: 80px;
+		}
+	}
+	address {
+		border-top: 1px solid $neutral_80;
+		font-style: normal;
+		@include max_767 {
+			font-size: 14px;
+			line-height: 21px;
+			padding-top: 16px;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+// @import "var";
+@import "../common/mixin";
+@import "../common/var";
+
+.nav_footer  {
+	position: sticky;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	border-top: 1px solid $text_300;
+	box-shadow: 0px 0px 16px rgba(36, 15, 81, 0.05);
+	margin-top: 8px;
+	z-index: 999;
+	.icon {
+		&_home {
+			background-image: url(../images/nav/nav_home.svg);
+		}
+		&_user {
+			background-image: url(../images/nav/nav_user.svg);
+		}
+	}
+	.nav_item {
+		color: #897AA6;
+		text-align: center;
+		&.active {
+			color: $primary_800;
+			.icon {
+				&_home {
+					background-image: url(../images/nav/nav_home-on.svg);
+				}
+				&_user {
+					background-image: url(../images/nav/nav_user-on.svg);
+				}
+			}
+		}
+	}
+}

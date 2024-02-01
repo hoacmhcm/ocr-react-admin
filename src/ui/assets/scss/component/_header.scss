@@ -1,0 +1,397 @@
+// @import "var";
+@import "../common/mixin";
+@import "../common/var";
+
+// Include module
+@import "ant_steps";
+@import "ant_menu";
+
+.ant-layout-header {
+  background-color: #fff;
+  padding: 0;
+  color: $neutral_90;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  height: auto;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding: 32px;
+    align-items: center;
+
+    .logo {
+      width: 187px;
+      height: 32px;
+      cursor: pointer;
+      // background-image: url('https://stc-fin.zdn.vn/fiza-website/images/logo_v2.svg');
+      background-image: url('@image/logo.svg');
+
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    @include max_767 {
+      display: block;
+    }
+    @include min_767 {
+      padding: 0 24px;
+    }
+  }
+
+  .logo {
+    width: 120px;
+    @include max_767 {
+      padding: 8px 0;
+    }
+    @include min_767 {
+      //position: absolute;
+      //top: 50%;
+      //transform: translateY(-50%);
+      //left: 24px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .btn_close {
+    position: absolute;
+    margin: auto;
+    right: 12px;
+    padding: 12px;
+    font-size: 16px;
+    top: 4px;
+    @include min_767 {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .anticon {
+      svg {
+        opacity: 0;
+      }
+    }
+  }
+
+  .ant-menu {
+    &.ant-menu-root {
+      display: flex;
+      align-items: center;
+
+      .ant-menu-overflow-item {
+        display: flex;
+        align-items: center;
+      }
+
+      & > li {
+        & + li {
+          padding: 19px 0;
+          margin: 0 20px;
+        }
+      }
+    }
+
+    .icon {
+      margin-right: -4px;
+      margin-top: 0;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 24px;
+
+      svg {
+        path {
+          fill: $neutral_80;;
+        }
+      }
+    }
+
+    .ant-menu-title-content {
+      display: flex;
+      align-items: center;
+    }
+
+    &-item {
+      &:not(.ant-menu-item-selected):hover {
+        svg {
+          path {
+            fill: $neutral_70
+          }
+        }
+
+        span {
+          color: $neutral_90;
+        }
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &-selected {
+        &:after {
+          display: none;
+        }
+
+        svg {
+          path {
+            fill: $brand_50 !important;
+          }
+        }
+
+        span {
+          color: $brand_50;
+        }
+      }
+    }
+
+    .ant-menu-submenu-horizontal {
+      position: absolute;
+      right: 4px;
+      top: 0;
+      bottom: 0;
+      @include max_767 {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.acc_user {
+  align-items: center;
+  height: 52px;
+  @include max_767 {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  @include min_767 {
+    margin-right: 16px;
+  }
+
+  .avatar {
+    margin-right: 8px;
+    width: 48px;
+    position: relative;
+    @include min_767 {
+      width: 40px;
+    }
+
+    .imgDrop {
+      padding-top: 100%;
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
+
+    &.has_premium {
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/label_premium.svg);
+        background-size: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  .content {
+    .name {
+      @include max_767 {
+        font-size: 18px;
+        line-height: 27px;
+        color: $neutral_90;
+      }
+    }
+
+    .sub_name {
+      @include max_767 {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+#btn_nav {
+  @include min_767 {
+    display: none;
+  }
+  width: 24px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  z-index: 99;
+
+  span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    background-color: $neutral_90;
+    position: relative;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $neutral_90;
+      left: 0;
+      transition: all .3s;
+    }
+
+    &:before {
+      top: -7px;
+    }
+
+    &:after {
+      bottom: -7px;
+    }
+  }
+
+  &.btn-active {
+    span {
+      background-color: #fff;
+
+      &:before {
+        top: 0;
+        left: 2px;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        bottom: 0;
+        left: 2px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.ant-menu-custom-class {
+  @include max_767 {
+    position: fixed;
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: all .2s;
+    z-index: 9;
+    background-color: #fff;
+    padding-top: 56px;
+    &:not(.ant-menu-submenu-hidden) {
+      transform: translateX(0);
+    }
+    .ant-menu {
+      box-shadow: none;
+      border: none;
+      padding: 0;
+
+      .ant-menu-item {
+        height: auto;
+        padding: 16px;
+
+        .ant-menu-title-content {
+          font-size: 17px !important;
+          line-height: 27px !important;
+          color: $neutral_90;
+        }
+
+        .icon {
+          width: 32px;
+          height: 32px;
+          margin-right: 16px;
+        }
+
+        & + .ant-menu-item:not(:last-child):before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+header {
+  .menu_heading {
+    @include max_767 {
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+    }
+
+    &.default_menu_heading {
+      @include min_767 {
+        width: 300px;
+      }
+    }
+  }
+
+  .menu_heading_mobile {
+    .ant-menu-sub {
+      display: block !important;
+    }
+
+    .ant-menu-title-content {
+      margin-left: 0;
+    }
+
+    li {
+      padding: 16px !important;
+    }
+  }
+
+  .step_heading {
+    .ant-steps-item-tail {
+      display: none !important;
+    }
+  }
+}
+
+.noti_package {
+  min-height: 44px;
+  background-color: $brand_50;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
+  @include min_767 {
+    padding: 8px 16px;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  button {
+    height: 28px;
+    line-height: 28px;
+    border: none;
+
+    .icon {
+      margin-top: 0;
+    }
+  }
+}

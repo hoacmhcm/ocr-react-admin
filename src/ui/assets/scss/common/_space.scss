@@ -1,0 +1,89 @@
+/* 
+  5. margin top 
+*/
+$sizes: 0, 2, 4, 6, 8, 12, 16,20, 24, 28, 32, 36, 40, 42, 48, 56, 60, 70, 75, 80, 100, 120, 140;
+
+@each $size in $sizes {
+  .mt-#{$size} {
+    margin-top: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .mb-#{$size} {
+    margin-bottom: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .ml-#{$size} {
+    margin-left: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .mr-#{$size} {
+    margin-right: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .mx-#{$size} {
+    margin: auto #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .my-#{$size} {
+    margin: #{$size}px auto;
+  }
+}
+@each $size in $sizes {
+  .m-#{$size} {
+    margin: #{$size}px;
+  }
+}
+
+
+@each $size in $sizes {
+  .pt-#{$size} {
+    padding-top: #{$size}px;
+  }
+}
+
+@each $size in $sizes {
+  .pb-#{$size} {
+    padding-bottom: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .pl-#{$size} {
+    padding-left: #{$size}px;
+  }
+}
+
+@each $size in $sizes {
+  .pr-#{$size} {
+    padding-right: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .px-#{$size} {
+    padding-left: #{$size}px;
+    padding-right: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .py-#{$size} {
+    padding-top: #{$size}px;
+    padding-bottom: #{$size}px;
+  }
+}
+@each $size in $sizes {
+  .p-#{$size} {
+    padding: #{$size}px;
+  }
+}
+
+.line {
+  &-top {border-top: 1px solid $neutral_30;}
+  &-bottom {border-bottom: 1px solid $neutral_30;}
+  &-left {border-left: 1px solid $neutral_30;}
+  &-right {border-right: 1px solid $neutral_30;}
+}
+.ml-auto {margin-left: auto;}

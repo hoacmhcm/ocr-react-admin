@@ -1,0 +1,28 @@
+.list {
+	&_dirc {
+		list-style-type: none;
+		margin-bottom: 0;
+		padding-left: 0;
+		li {
+			position: relative;
+			padding-left: 18px;
+			&:before {
+				position: absolute;
+				content: "";
+				left: 5px;
+				border-radius: 50%;
+				background:#343436;
+				top: 8px;
+				width: 3px;
+				height: 3px;
+			}
+		}
+		&.fz {
+			&-14 {
+				li {
+					&:before {top: 8px;}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+
+// @import "var";
+@import "mixin";
+@import "var";
+.trim {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	&.trim_1 {
+		-webkit-line-clamp: 1;
+	}
+	&.trim_2 {
+		-webkit-line-clamp: 2;
+	}
+	&.trim_3 {
+		-webkit-line-clamp: 3;
+	}
+	&.trim_4 {
+		-webkit-line-clamp: 4;
+	}
+}
+.text_limit {
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.text {
+	&-center {text-align: center;}
+	&-left {text-align: left;}
+	&-right {text-align: right;}
+
+  &-underline {text-decoration: underline;}
+
+}
+.fnt {
+	&_bold {
+		font-weight: bold;
+	}
+	&_medium {
+		font-weight: 500;
+	}
+	&_black {
+	    font-weight: 900;
+	}
+}
+strong {font-weight: 500;}
+.color {
+	&_red {color: $red;}
+	&_green {color: $green;}
+	&_neu {
+		&_70 {color: $neutral_70;}
+		&_80 {color: $neutral_80;}
+		&_90 {color: $neutral_90;}
+	}
+	&_brand {
+		&_50 {
+			color: $brand_50;
+		}
+	}
+  &_extend {
+    &_green {
+      background: -webkit-linear-gradient(90deg, #81DB3E 0%, #3AD888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &_yellow {
+      background: -webkit-linear-gradient(37.69deg, #FFC700 -17.32%, #B88605 86.74%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+	&_n {
+		&1 {color: $n1;}
+		&2 {color: $n2;}
+		&4 {color: $n4;}
+	}
+}
+.fz {
+	&-32 {
+		font-size: 28px;
+		line-height: 34px;
+		@include min_767 {
+			font-size: 32px;
+			line-height: 39px;
+		}
+	}
+	&-24 {
+		font-size: 18px;
+		line-height: 27px;
+		@include min_767 {
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+	&-20 {
+		font-size: 18px;
+		line-height: 27px;
+		@include min_767 {
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+	&-18 {
+		font-size: 18px;
+		line-height: 27px;
+	}
+	&-16 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	&-14 {
+		font-size: 14px;
+		line-height: 21px;
+	}
+	&-12 {
+		font-size: 12px;
+		line-height: 15px;
+	}
+}
+.fw {
+	&-400 {font-weight: 400;}
+	&-500 {font-weight: 500;}
+	&-600 {font-weight: 600;}
+	&-700 {font-weight: 700;}
+
+  &-400-important {font-weight: 400 !important;}
+	&-500-important {font-weight: 500 !important;}
+	&-600-important {font-weight: 600 !important;}
+	&-700-important {font-weight: 700 !important;}
+}

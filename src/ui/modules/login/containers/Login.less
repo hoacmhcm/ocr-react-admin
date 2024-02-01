@@ -1,0 +1,104 @@
+.cms-layout-app-login {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  // background-image: url(../../../assets/images/background-login.png);
+  background-size: 100% 100%;
+
+  .layout-form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+      width: 311px;
+
+      .ant-form-item {
+        margin-bottom: 30px;
+
+        &-row {
+          .ant-form-item-control {
+            width: 100%;
+            height: 45px;
+
+            &-input {
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .ant-form-item-explain {
+        margin-bottom: 0;
+        position: absolute;
+        top: 100%;
+      }
+
+      button {
+        height: 52px;
+      }
+    }
+  }
+
+  .card-form-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 455px;
+    min-height: 425px;
+
+    &__body {
+      height: 100%;
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .logo-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-login {
+    height: 32px;
+    margin: 0 auto;
+  }
+
+  .zalo-wrap-img {
+    width: auto;
+
+    .text-login-with {
+      margin-right: 10px;
+      font-size: 15px;
+    }
+
+    .icon {
+      width: 50px;
+      filter: sepia(100%) grayscale(100%);
+    }
+
+    .icon:hover {
+      width: 50px;
+      filter: none;
+    }
+  }
+
+  .login-button {
+    height: 40px;
+    width: 100%;
+
+
+    .icon {
+      width: 32px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.login-button-microsoft {
+  margin-top: 16px;
+}

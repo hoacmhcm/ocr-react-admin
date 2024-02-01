@@ -1,0 +1,21 @@
+.ant-tooltip {
+	max-width: 300px!important;
+	&-inner {
+		border-radius: 8px;
+		font-size: 12px;
+		padding: 8px 12px;
+		line-height: 18px;
+	}
+// 	&-arrow-content {
+// 	  &:before {
+// 	    background: #FBEEEE!important;
+// 	  }
+// }
+	ul, ol {
+		padding: 0;
+	    margin: 8px 8px 8px 24px;
+	    list-style-position: outside;
+	    font-size: 12px;
+	    color: #eee;
+	}
+}

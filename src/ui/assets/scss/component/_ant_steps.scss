@@ -1,0 +1,83 @@
+
+// @import "var";
+@import "../common/mixin";
+@import "../common/var";
+
+.ant-steps {
+	@include max_767 {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 12px 0;
+		border-top: 1px solid $neutral_20;
+	}
+	@include min_767 {
+		width: auto;
+	}
+	.ant-steps-item-container {
+		display: flex;
+		align-items: center;
+		@include max_767 {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+	.ant-steps-item {
+        flex: inherit;
+        padding-left: 0;
+		.ant-steps-item-icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 32px;
+			height: 32px;
+			flex-shrink: 0;
+			border-radius: 4px;
+			border: none;
+			background-color: $neutral_20;
+			color: $neutral_50;
+			font-weight: 500;
+			font-size: 14px;
+			@include max_767 {
+				margin-right: 0;
+			}
+			&> .ant-steps-icon {
+				top: auto;
+				display: block;
+			}
+		}
+		.ant-steps-item-content {
+			min-height: auto;
+			@include max_767 {
+				margin-top: 8px;
+			}
+			.ant-steps-item-title {
+				color: $neutral_50;
+				padding-right: 0;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 21px;
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 48px;
+			@include min_767 {margin-right: 24px;}
+		}
+		&.ant-steps-item-active {
+			color: $brand_50;
+			.ant-steps-item-icon {
+				background-color: $brand_10;
+				&> .ant-steps-icon {
+					color: $brand_50;
+				}
+			}
+			.ant-steps-item-content {
+				.ant-steps-item-title {
+					color: $brand_50;
+				}
+			}
+		}
+	}
+}

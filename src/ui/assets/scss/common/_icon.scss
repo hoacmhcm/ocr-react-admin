@@ -1,0 +1,149 @@
+
+// @import "var";
+@import "mixin";
+@import "var";
+
+$sizes: 12, 16, 20, 24,30, 32;
+.icon {
+	background-size: 100%;
+	display: block;
+	position: relative;
+	@each $size in $sizes {
+	  &.sz-#{$size} {
+	    width: #{$size}px;
+	    height: #{$size}px;
+	  }
+	}
+	i, svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		* {transition: all .3s;}
+	}
+}
+span.icon {
+	vertical-align: middle;
+	margin-top: -2px;
+}
+.action {
+	cursor: pointer;
+	transition: all .3s;
+	background-size: 100%;
+	background-position: center center;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+// icon name
+.icon {
+	&_add {
+		&_w {
+			background-image: url(../images/icon/icon_add_w.svg);
+		}
+	}
+	&_edit {
+		&_blue {
+			background-image: url(../images/icon/icon_edit_blue.svg);
+		}
+		&_gray {
+				background-image: url(../images/icon/icon_edit_gray.svg);
+		}
+	}
+	&_verifying {
+		background-image: url(../images/icon/status_verifyng.svg);
+	}
+	&_verified {
+		background-image: url(../images/icon/status_verified.svg);
+	}
+  &_disabled {
+		background-image: url(../images/icon/status_disabled.svg);
+	}
+	&_check {
+		&_green {
+			background-image: url(../images/icon/icon_check_green.svg);
+		}
+    &_yellow {
+      background-image: url(../images/icon/icon_check_yellow.svg);
+    }
+		&2_w {
+			background-image: url(../images/icon/icon_check2_w.svg);
+		}
+	}
+	&_close {
+		&_red {
+			background-image: url(../images/icon/icon_close_red.svg);
+		}
+	}
+	&_info {
+		&_yellow {
+			background-image: url(../images/icon/icon_info_yellow.svg);
+		}
+	}
+	&_arr {
+		&_right {
+			&_w {
+				background-image: url(../images/icon/icon_arr_right_w.svg);
+			}
+		}
+	}
+	&_premium {
+		&_w {background-image: url(../images/icon/icon_premium_w.svg);}
+	}
+	&_user_list {
+	  &_blue {background-image: url(../images/icon/icon_user_list_blue.svg);}
+	}
+	&_clock {
+	  &_yellow {background-image: url(../imges/icon/icon_clock_yellow.svg);}
+	}
+	&_contact {
+	  &_blue {background-image: url(../images/icon/icon_contact_blue.svg);}
+	}
+	&_eye {
+	  &_blue {background-image: url(../images/icon/icon_eye_blue.svg);}
+	}
+	&_back {
+	  &_grey {background-image: url(../images/icon/icon_back_grey.svg);}
+	}
+  &_calendar {
+    &_green {background-image: url(../images/icon/icon_calendar_green.svg);}
+  }
+}
+.ant-select,
+.ant-input,
+.ant-picker {
+	svg {display: none;}
+}
+.anticon {
+  background-size: cover;
+	&-search {
+		background-image: url(../images/icon/icon_search_black.svg);
+	}
+	&-close {
+		background-image: url(../images/icon/icon_close_black.svg);
+	}
+	&-calendar {
+    background-image: url(../images/icon/icon_calendar_blue.png);
+	}
+
+	&-edit {
+		background-image: url(../images/icon/icon_edit_blue.svg);
+		&-gray {
+			background-image: url(../images/icon/icon_edit_gray.svg);
+		}
+	}
+	&-download {
+		background-image: url(../images/icon/icon_download_blue.svg);
+		&-gray {
+			background-image: url(../images/icon/icon_download_gray.svg);
+		}
+		&-w {
+			background-image: url(../images/icon/icon_download_w.svg);
+		}
+	}
+  &-user_list {
+		background-image: url(../images/icon/icon_user_list_blue.svg);
+	}
+}

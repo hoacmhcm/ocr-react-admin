@@ -1,0 +1,118 @@
+.cms-layout-app {
+  min-height: 100vh;
+
+  .trigger {
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 64px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .trigger:hover {
+    color: #003a8c;
+  }
+
+  .logo {
+    width: 187px;
+    height: 32px;
+    cursor: pointer;
+    // background-image: url('https://stc-fin.zdn.vn/fiza-website/images/logo_v2.svg');
+    background-image: url(../../assets/images/logo.svg);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .site-layout .site-layout-background {
+    padding: 32px;
+    border-radius: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    //overflow-x: scroll;
+  }
+
+  .site-layout-header {
+    background: #fff;
+
+    box-shadow: 0 2px 8px #f2f2f2;
+
+    .menu-header {
+      flex: auto;
+      justify-content: center;
+    }
+  }
+}
+
+.ant-layout-sider-collapsed {
+  .logo {
+    background-image: url(../../assets/images/logo.png) !important;
+  }
+}
+
+.top-right-container {
+  display: flex;
+}
+
+.platform-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.action-container {
+  display: flex;
+  align-items: center;
+  // margin-right: 30px;
+  cursor: pointer;
+}
+
+.app-type-menu {
+  padding-bottom: 16px;
+
+  .ant-menu-item {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+// .site-layout .site-layout-background {
+//   margin-top: 80px;
+// }
+
+// .site-layout-header {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   z-index: 1080;
+// }
+
+.ant-message {
+  z-index: 9999;
+}
+
+// .ant-modal-root {
+//   .ant-modal-mask {
+//     z-index: 1100;
+//   }
+//   .ant-modal-wrap {
+//     z-index: 1200;
+//   }
+// }
+// .ant-select-dropdown {
+//   z-index: 99999 !important;
+// }
+
+// TODO: handle z-index
+// header: ?
+
+// preview-mask: 1080
+// preview-wrap: 1080;
+
+// modal-mask: 1000;
+// modal-wrap: 1000;
+
+// dropdown: 1050
+// message: 9999

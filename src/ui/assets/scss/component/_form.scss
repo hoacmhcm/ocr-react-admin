@@ -1,0 +1,121 @@
+// @import "var";
+@import "../common/mixin";
+@import "../common/var";
+
+.form_group {
+	background: #fff;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+	border-radius: 8px;
+	overflow: hidden;
+	&+.form_group {
+		margin-top: 12px;
+	}
+	.heading {
+		position: relative;
+		padding: 16px;
+		border-bottom: 1px solid $text_300;
+		overflow: auto;
+		&::-webkit-scrollbar {display: none;}
+		.text-sub {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 16px;
+		}
+	}
+	.boding {
+		padding: 16px 16px 18px;
+	}
+	&.tabs {
+		.heading {
+			padding: 0;
+		}
+	}
+}
+.group_field {
+	min-width: 50%;
+	width: 100%;
+	position: relative;
+	label {
+		display: block;
+		color: $text_700;
+	}
+	.field_input {
+		margin-top: 4px;
+		background-color: #FAFAFA;
+		border: 1px solid $text_200;
+		border-radius: 8px;
+		height: 40px;
+		padding: 12px 8px;
+		margin-bottom: 34px;
+		&::placeholder {
+			color: $text_500;
+		}
+		&:focus-visible {
+			border: 1px solid $ana_200;
+			outline: none;
+			box-shadow: none;
+		}
+		&.disabled {
+			pointer-events: none;
+			background-color: $text_200;
+		}
+		&.icon {
+			padding-right: 40px;
+			background-size: 20px;
+			background-repeat: no-repeat;
+			background-position: center right 10px;
+			&_dropdown {
+				background-image: url(../images/icon/form_dropdown_main.svg);
+			}
+			&_calendar {
+				background-image: url(../images/icon/form_calendar_main.svg);
+				&.disabled {
+					background-image: url(../images/icon/form_calendar_gray.svg);
+				}
+			}
+		}
+	}
+	.field_value {
+		min-height: 40px;
+		padding: 12px 0;
+		margin-top: 4px;
+		margin-bottom: 16px;
+		width: 100%;
+	}
+	.suggest_list {
+		position: absolute;
+		top: 100%;
+		margin-top: 4px;
+		span {
+			display: block;
+			margin-right: 8px;
+			background: #FDF7FF;
+			border: 1px solid #E6E6F2;
+			border-radius: 8px;
+			color: $ana_2200;
+			padding: 8px;
+			font-size: 12px;
+			line-height: 14px;
+		}
+	}
+	&:last-child {
+		.field_input:not(.mb-34) {
+			margin-bottom: 18px;
+		}
+		.field_value {
+			margin-bottom: 0;
+		}
+	}
+	&.field_err {
+		position: relative;
+		.field_input {
+			border-color: $red;
+		}
+		.text_err {
+			position: absolute;
+			top: 64px;
+			left: 4px;
+		}
+	}
+}
