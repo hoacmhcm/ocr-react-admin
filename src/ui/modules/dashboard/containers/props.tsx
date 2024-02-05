@@ -21,24 +21,24 @@ export const columnTableProps = ({}): ColumnType<any>[] => {
       },
     },
     {
-      title: 'Result',
+      title: 'Kết quả OCR',
       width: 300,
       dataIndex: 'ocr_result',
     },
     {
-      title: 'OCR Time',
+      title: 'Thời gian OCR',
       dataIndex: 'ocr_time',
       responsive: ['lg', 'md', 'sm'],
     },
     {
-      title: 'Origin Image',
+      title: 'Ảnh gốc',
       dataIndex: 'origin_image_path',
       render: (value) => {
         return <Image src={value} />;
       },
     },
     {
-      title: 'Yolo Image',
+      title: 'Ảnh YOLO',
       dataIndex: 'yolo_image_path',
       render: (value) => {
         return <Image src={value} />;
