@@ -16,7 +16,7 @@ export const MAIN_ROUTES = [
     element: Login,
   },
   {
-    path: ROUTE.DASHBOARD,
+    path: '',
     name: 'dashboard',
     element: Dashboard,
   },
