@@ -70,7 +70,7 @@ function Dashboard() {
       {/*  </div>*/}
       {/*</Card>*/}
 
-      <Card className="dashboard-card" title="OCR Result">
+      <Card className="dashboard-card" title="Kết quả OCR">
         <div className="table-container">
           <BaseTable
             idKey="id"

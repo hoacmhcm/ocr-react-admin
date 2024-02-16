@@ -12,7 +12,7 @@ export const columnTableProps = ({}): ColumnType<any>[] => {
       sorter: (a, b) => b.id - a.id,
     },
     {
-      title: 'Name',
+      title: 'Tên người dùng',
       width: 300,
       dataIndex: 'name',
       sorter: (a, b) => {
@@ -26,7 +26,7 @@ export const columnTableProps = ({}): ColumnType<any>[] => {
       dataIndex: 'ocr_result',
     },
     {
-      title: 'Thời gian OCR',
+      title: 'Thời gian dự đoán',
       dataIndex: 'ocr_time',
       responsive: ['lg', 'md', 'sm'],
     },
