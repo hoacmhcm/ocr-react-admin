@@ -48,6 +48,6 @@ export const MAPPING_CHART_TYPE_AND_PICKER_TYPE = {
 };
 
 
-export const DEFAULT_PAGE_SIZE = 10;
+export const DEFAULT_PAGE_SIZE = 50;
 
 export const PAGE_SIZE_OPTIONS = [10, 20, 50, 100];

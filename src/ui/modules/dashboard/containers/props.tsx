@@ -5,13 +5,6 @@ import { Image } from 'antd';
 export const columnTableProps = ({}): ColumnType<any>[] => {
   return [
     {
-      title: 'ID',
-      dataIndex: 'id',
-      width: 20,
-      responsive: ['lg', 'md', 'sm'],
-      sorter: (a, b) => b.id - a.id,
-    },
-    {
       title: 'Tên người dùng',
       width: 300,
       dataIndex: 'name',
