@@ -20,6 +20,7 @@ export const columnTableProps = ({}): ColumnType<any>[] => {
     },
     {
       title: 'Thời gian dự đoán',
+      width: 150,
       dataIndex: 'ocr_time',
       responsive: ['lg', 'md', 'sm'],
     },
