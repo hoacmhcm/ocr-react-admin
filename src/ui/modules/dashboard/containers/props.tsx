@@ -6,7 +6,7 @@ export const columnTableProps = ({}): ColumnType<any>[] => {
   return [
     {
       title: 'Tên người dùng',
-      width: 300,
+      width: 150,
       dataIndex: 'name',
       sorter: (a, b) => {
         if (!a.name || !b.name) return;
