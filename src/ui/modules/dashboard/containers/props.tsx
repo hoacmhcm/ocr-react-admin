@@ -19,7 +19,7 @@ export const columnTableProps = ({}): ColumnType<any>[] => {
       dataIndex: 'ocr_result',
     },
     {
-      title: 'Thời gian dự đoán',
+      title: 'Thời gian dự đoán (giây)',
       width: 150,
       dataIndex: 'ocr_time',
       responsive: ['lg', 'md', 'sm'],
